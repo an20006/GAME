@@ -32,3 +32,18 @@ body{
     bottom: 0;
     left: 44vw;
 }
+.animateDino{
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+}
