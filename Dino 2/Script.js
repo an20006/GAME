@@ -20,3 +20,9 @@ document.onkeydown = function (e) {
         dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
         dino.style.left = dinoX + 112 + "px";
     }
+    if (e.keyCode == 37) {
+        dino = document.querySelector('.dino');
+        dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+        dino.style.left = (dinoX - 112) + "px";
+    }
+}
