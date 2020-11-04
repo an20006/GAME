@@ -23,3 +23,12 @@ body{
     bottom:0;
     left: 52px;
 }
+.obstacle{
+    width: 166px;
+    height: 113px;
+    background-image: url(dragon.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
