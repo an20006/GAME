@@ -12,8 +12,9 @@
 #dino {
     width: 20px;
     height: 50px;
-    background-image: url(dino1.png);
-    background-size: cover;
+    background-color: azure;
+    /* background-image: url(dino1.png);
+    background-size: cover; */
     position: relative;
     top: 150px;
 }
@@ -21,12 +22,21 @@
 #dragon {
     width: 20px;
     height: 20px;
-    background-image: url(dragon1.png);
-    background-size: cover;
+    background-color: blueviolet;
+    /* background-image: url(dragon1.png);
+    background-size: cover; */
     position: relative;
     top: 130px;
-    left: 480px;
-    animation: dragonLeft 1s infinite linear;
+    left: 500px;
+}
+
+#bird {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 80px;
+    left: 500px;
 }
 
 #score {
@@ -34,7 +44,7 @@
     color: #54212f;
     font-weight: bold;
     position: absolute;
-    right: 45px;
+    right: 500px;
     top: 31px;
     border: 2px solid black;
     padding: 10px;
@@ -49,11 +59,35 @@
     100% {top: 150px;}
 }
 
+@keyframes dinoDuck {
+    0% {top: 150px;}
+    35% {top: 200px;}
+    65% {top: 200px;}
+    100% {top: 150px;}
+}
+
 @keyframes dragonLeft {
+    0% {left: 480px;}
+    100% {left: -40px;}
+}
+
+@keyframes birdLeft {
     0% {left: 480px;}
     100% {left: -40px;}
 }
 
 .animateDino {
     animation: dinoJump 500ms;
+}
+
+.animateDinoDuck {
+    animation: dinoDuck 500ms;
+}
+
+.animateDragon {
+    animation: dragonLeft 1s linear;
+}
+
+.animateBird {
+    animation: birdLeft 1s linear;
 }

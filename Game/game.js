@@ -1,6 +1,30 @@
 var dino = document.getElementById("dino");
 var dragon = document.getElementById("dragon");
-function dinoJump() {
+var bird = document.getElementById("bird");
+
+setInterval(function(){ // This function randomly goes between the bird and dragon
+    var number = Math.random();
+    if (number <= 0.5){
+        if (dragon.classList == "animateDragon"){
+            return
+        }
+        dragon.classList.add("animateDragon");
+        setTimeout(function(){
+            dragon.classList.remove("animateDragon")
+        }, 1000)
+    }
+    else {
+        if (bird.classList == "animateBird"){
+            return
+        }
+        bird.classList.add("animateBird");
+        setTimeout(function(){
+            bird.classList.remove("animateBird")
+        }, 1000)
+    }
+}, 500)
+
+function dinoJump() { // Makes dino jump 
     if (dino.classList == "animateDino"){
         return
     }
@@ -10,13 +34,27 @@ function dinoJump() {
     }, 500);
 }
 
+function dinoDuck() { // Makes dino duck
+    if (dino.classList == "animateDinoDuck"){
+        return
+    }
+    dino.classList.add("animateDinoDuck");
+    setTimeout(function(){
+        dino.classList.remove("animateDinoDuck");
+    }, 500);
+}
+
 var scoreIncrease = 0;
-var ifHit = setInterval(function(){
+var ifHit = setInterval(function(){ // Ends game and also increases score
     var dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
     var dragonLeft = parseInt(window.getComputedStyle(dragon).getPropertyValue("left"));
+    var birdLeft = parseInt(window.getComputedStyle(bird).getPropertyValue("left"));
     if (dragonLeft<20 && dragonLeft>0 && dinoTop>= 130){
-        dragon.style.animation = "none";
+        dragon.style.animation = "none"
         dragon.style.display = "none";
+        alert("You Lose! Your Score is " + parseInt(scoreIncrease))
+    }
+    if (birdLeft<20 && birdLeft>0 && dinoTop<= 170){
         alert("You Lose! Your Score is " + parseInt(scoreIncrease))
     }
     else {
