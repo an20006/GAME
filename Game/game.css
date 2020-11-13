@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#gameContainer {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#dino {
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px;
+}
+
+#dragon {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: dragonLeft 1s infinite linear;
+}
+
+@keyframes dinoJump {
+    0% {top: 150px;}
+    35% {top: 100px;}
+    65% {top: 100px;}
+    100% {top: 150px;}
+}
+
+@keyframes dragonLeft {
+    0% {left: 480px;}
+    100% {left: -40px;}
+}
+
+.animateDino {
+    animation: dinoJump 500ms;
+}
