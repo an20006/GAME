@@ -26,6 +26,19 @@
     animation: dragonLeft 1s infinite linear;
 }
 
+#score {
+    font-size: 25px;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
 @keyframes dinoJump {
     0% {top: 150px;}
     35% {top: 100px;}
