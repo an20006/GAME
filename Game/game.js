@@ -49,19 +49,21 @@ var ifHit = setInterval(function(){ // Ends game and also increases score
     var dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
     var dragonLeft = parseInt(window.getComputedStyle(dragon).getPropertyValue("left"));
     var birdLeft = parseInt(window.getComputedStyle(bird).getPropertyValue("left"));
-    if (dragonLeft<20 && dragonLeft>0 && dinoTop>= 130){
+    if (dragonLeft<20 && dragonLeft>0 && dinoTop>= 430){
         dragon.style.animation = "none";
         dragon.style.display = "none";
         bird.style.animation = "none";
         bird.style.display = "none";
-        alert("You Lose! Your Score is " + parseInt(scoreIncrease))
+        alert("You Lose! Your Score is " + parseInt(scoreIncrease))     
+        scoreIncrease = "none"; 
     }
-    if (birdLeft<20 && birdLeft>0 && dinoTop<= 170){
+    if (birdLeft<20 && birdLeft>0 && dinoTop<= 470){
         dragon.style.animation = "none";
         dragon.style.display = "none";
         bird.style.animation = "none";
         bird.style.display = "none";
         alert("You Lose! Your Score is " + parseInt(scoreIncrease))
+        scoreIncrease = "none";
     }
     else {
         scoreIncrease += 1/100;
