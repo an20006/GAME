@@ -25,7 +25,7 @@ setInterval(function(){ // This function randomly goes between the bird and drag
 }, 500)
 
 function dinoJump() { // Makes dino jump 
-    if (dino.classList == "animateDino"){
+    if (dino.classList == "animateDino" || dino.classList == "animateDinoDuck"){
         return
     }
     dino.classList.add("animateDino");
@@ -35,7 +35,7 @@ function dinoJump() { // Makes dino jump
 }
 
 function dinoDuck() { // Makes dino duck
-    if (dino.classList == "animateDinoDuck"){
+    if (dino.classList == "animateDino" || dino.classList == "animateDinoDuck"){
         return
     }
     dino.classList.add("animateDinoDuck");
