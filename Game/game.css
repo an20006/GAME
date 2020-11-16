@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#gameContainer {
+    background-image: url(bg.png);
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+#dino {
+    width: 150px;
+    height: 75px;
+    background-image: url(dino1.png);
+    background-size: cover;
+    position: relative;
+    top: 425px;
+}
+
+#dragon {
+    width: 30px;
+    height: 20px;
+    background-image: url(boulder.png);
+    background-size: cover;
+    position: relative;
+    top: 405px;
+    left: 90%;
+}
+
+#bird {
+    width: 30px;
+    height: 20px;
+    background-image: url(boulder.png);
+    background-size: cover;
+    position: relative;
+    top: 355px;
+    left: 90%;
+}
+
+#score {
+    font-size: 25px;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 500px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+@keyframes dinoJump {
+    0% {top: 425px;}
+    35% {top: 375px;}
+    65% {top: 375px;}
+    100% {top: 425px;}
+}
+
+@keyframes dinoDuck {
+    0% {top: 425px;}
+    35% {top: 475px;}
+    65% {top: 475px;}
+    100% {top: 425px;}
+}
+
+@keyframes dragonLeft {
+    0% {left: 90%;}
+    100% {left: -40px;}
+}
+
+@keyframes birdLeft {
+    0% {left: 90%;}
+    100% {left: -40px;}
+}
+
+.animateDino {
+    animation: dinoJump 500ms;
+}
+
+.animateDinoDuck {
+    animation: dinoDuck 500ms;
+}
+
+.animateDragon {
+    animation: dragonLeft 1s linear;
+}
+
+.animateBird {
+    animation: birdLeft 1s linear;
+}
