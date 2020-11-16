@@ -10,30 +10,31 @@
 }
 
 #dino {
-    width: 125px;
+    width: 150px;
     height: 75px;
     background-image: url(dino1.png);
     background-size: cover;
     position: relative;
-    top: 450px;
+    top: 425px;
 }
 
 #dragon {
-    width: 20px;
+    width: 30px;
     height: 20px;
-    background-image: url(dragon1.png);
+    background-image: url(boulder.png);
     background-size: cover;
     position: relative;
-    top: 430px;
+    top: 405px;
     left: 90%;
 }
 
 #bird {
-    width: 20px;
+    width: 30px;
     height: 20px;
-    background-color: blue;
+    background-image: url(boulder.png);
+    background-size: cover;
     position: relative;
-    top: 380px;
+    top: 355px;
     left: 90%;
 }
 
@@ -51,17 +52,17 @@
 }
 
 @keyframes dinoJump {
-    0% {top: 450px;}
-    35% {top: 400px;}
-    65% {top: 400px;}
-    100% {top: 450px;}
+    0% {top: 425px;}
+    35% {top: 375px;}
+    65% {top: 375px;}
+    100% {top: 425px;}
 }
 
 @keyframes dinoDuck {
-    0% {top: 450px;}
-    35% {top: 500px;}
-    65% {top: 500px;}
-    100% {top: 450px;}
+    0% {top: 425px;}
+    35% {top: 475px;}
+    65% {top: 475px;}
+    100% {top: 425px;}
 }
 
 @keyframes dragonLeft {
