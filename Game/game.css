@@ -1,3 +1,48 @@
+.button {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: transparent;
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .button2 {
+      background-color: transparent;
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;   
+  }
+
+  .button3 {
+      background-color: transparent;
+      color: black;
+      border: 2px solid #ba0057;
+  }
+
+  .button3:hover {
+      background-color: #ba0057;
+      color: white;
+  }
+  
+
 *{
     padding: 0;
     margin: 0;
@@ -15,7 +60,7 @@
     background-image: url(dino1.png);
     background-size: cover;
     position: relative;
-    top: 425px;
+    top: 365px;
 }
 
 #dragon {
@@ -24,7 +69,7 @@
     background-image: url(boulder.png);
     background-size: cover;
     position: relative;
-    top: 405px;
+    top: 345px;
     left: 90%;
 }
 
@@ -34,7 +79,7 @@
     background-image: url(boulder.png);
     background-size: cover;
     position: relative;
-    top: 355px;
+    top: 295px;
     left: 90%;
 }
 
@@ -52,17 +97,17 @@
 }
 
 @keyframes dinoJump {
-    0% {top: 425px;}
-    35% {top: 375px;}
-    65% {top: 375px;}
-    100% {top: 425px;}
+    0% {top: 365px;}
+    35% {top: 315px;}
+    65% {top: 315px;}
+    100% {top: 365px;}
 }
 
 @keyframes dinoDuck {
-    0% {top: 425px;}
-    35% {top: 475px;}
-    65% {top: 475px;}
-    100% {top: 425px;}
+    0% {top: 365px;}
+    35% {top: 415px;}
+    65% {top: 415px;}
+    100% {top: 365px;}
 }
 
 @keyframes dragonLeft {

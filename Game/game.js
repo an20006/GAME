@@ -3,15 +3,24 @@ var dragon = document.getElementById("dragon");
 var bird = document.getElementById("bird");
 music = new Audio("music.mp3")
 gameOverMusic = new Audio("gameover.mp3")
+dead = false;
 
-// setTimeout(() => {
-//     music.play()
-// }, 1000);
+function restart() {
+    dead = false;
+    scoreIncrease = 0;
+    moveObjects();
+    hit();
+}
 
+music.play()
+var move = moveObjects();
+function moveObjects() {
 setInterval(function(){ // This function randomly goes between the bird and dragon
     var number = Math.random();
-    music.play()
-    if (number <= 0.5){
+    if (dead == true) {
+        return;
+    }
+    else if (number <= 0.5){
         if (dragon.classList == "animateDragon"){
             return
         }
@@ -30,9 +39,14 @@ setInterval(function(){ // This function randomly goes between the bird and drag
         }, 1000)
     }
 }, 500)
+}
+
 
 function dinoJump() { // Makes dino jump 
-    if (dino.classList == "animateDino" || dino.classList == "animateDinoDuck"){
+    if (dead == true) {
+        return;
+    }
+    else if (dino.classList == "animateDino" || dino.classList == "animateDinoDuck"){
         return
     }
     dino.classList.add("animateDino");
@@ -51,37 +65,29 @@ function dinoDuck() { // Makes dino duck
     }, 500);
 }
 
-var scoreIncrease = 0;
-var ifHit = setInterval(function(){ // Ends game and also increases score
-    var dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+scoreIncrease = 0;
+var hit = hit()
+function hit(){
+setInterval(function(){ // Ends game and also increases score
     var dragonLeft = parseInt(window.getComputedStyle(dragon).getPropertyValue("left"));
     var birdLeft = parseInt(window.getComputedStyle(bird).getPropertyValue("left"));
-    if (dragonLeft<150 && dragonLeft>0 && dinoTop>= 405){
-        // dragon.style.animation = "none";
-        // dragon.style.display = "none";
-        // bird.style.animation = "none";
-        // bird.style.display = "none";
+    var dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+    if ((dragonLeft<150 && dragonLeft>0 && dinoTop>= 345) || (birdLeft<150 && birdLeft>0 && dinoTop<= 385)){
+        dead = true;
         music.pause();
-        gameOverMusic.play();
-        alert("You Lose! Your Score is " + parseInt(scoreIncrease))     
+        gameOverMusic.play();    
         scoreIncrease = 0;
-    }
-    if (birdLeft<150 && birdLeft>0 && dinoTop<= 445){
-        // dragon.style.animation = "none";
-        // dragon.style.display = "none";
-        // bird.style.animation = "none";
-        // bird.style.display = "none";
-        music.pause();
-        gameOverMusic.play();
-        alert("You Lose! Your Score is " + parseInt(scoreIncrease))
-        scoreIncrease = 0;
+        delete scoreIncrease;
+        return;
     }
     else {
         scoreIncrease += 1/100;
         increaseScore(scoreIncrease)
     }
 }, 10)
+}
 
 function increaseScore(scoreIncrease){
     document.getElementById("score").innerHTML = "Score : " + parseInt(scoreIncrease);
 }
+
