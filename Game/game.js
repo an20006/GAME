@@ -101,7 +101,7 @@ setInterval(function(){ // Ends game and also increases score
     if ((dragonLeft<150 && dragonLeft>0 && dinoTop>= 345) || (birdLeft<150 && birdLeft>0 && dinoTop<= 385)){
         dead = true;
         gameOverMusic.play();
-        gameOver.innerHTML = "Game Over! Press Restart"
+        gameOver.innerHTML = "Game Over! Click on the Restart Button"
         update_leaderboard(  currentplayer , parseInt(scoreIncrease));
         delete scoreIncrease; moveObjects = undefined;
         return;
