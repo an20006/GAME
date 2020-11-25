@@ -12,6 +12,7 @@
         <button onclick="restart()" id="button1" class="button button1">Restart</button>
         <button onClick="music.play()" id= "button2" class="button button2">Play Music</button>
         <button onClick="music.pause()" id= "button3" class="button button3">Pause Music</button>
+        <button id="leaderboard" class="button button4" ><a href="leaderboard.php">Go to Leaderboard</a></button>
         <div id="gameOver"></div>
         <div id="dino"></div>
         <div id="dragon"></div>
