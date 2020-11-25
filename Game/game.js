@@ -100,7 +100,6 @@ setInterval(function(){ // Ends game and also increases score
     var dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
     if ((dragonLeft<150 && dragonLeft>0 && dinoTop>= 345) || (birdLeft<150 && birdLeft>0 && dinoTop<= 385)){
         dead = true;
-        music.pause();
         gameOverMusic.play();
         gameOver.innerHTML = "Game Over! Press Restart"
         update_leaderboard(  currentplayer , scoreIncrease );
