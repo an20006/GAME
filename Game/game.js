@@ -5,6 +5,10 @@ music = new Audio("music.mp3")
 gameOverMusic = new Audio("gameover.mp3")
 dead = false;
 music.play()
+currentplayer = '';
+
+// Get new player.
+get_player();
 
 function restart() {
     dead = false;
@@ -99,6 +103,7 @@ setInterval(function(){ // Ends game and also increases score
         music.pause();
         gameOverMusic.play();
         gameOver.innerHTML = "Game Over! Press Restart"
+        update_leaderboard(  currentplayer , scoreIncrease );
         delete scoreIncrease; moveObjects = undefined;
         return;
     }
@@ -111,5 +116,21 @@ setInterval(function(){ // Ends game and also increases score
 
 function increaseScore(scoreIncrease){
     document.getElementById("score").innerHTML = "Score : " + parseInt(scoreIncrease);
+}
+
+function get_player() {
+    currentplayer = prompt( "Please enter your name", "Harry Potter" );
+}
+
+function update_leaderboard( player,score ) { 
+    jQuery.ajax({
+        url:"functions.php",    //the page containing php script
+        type: "post",    //request type,
+        dataType: 'json',
+        data: { player: player, score: score, action:'add_score' },
+        success:function(result){
+            console.log(result.result);
+        }
+    });
 }
 
