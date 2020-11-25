@@ -16,7 +16,7 @@
         <div id="dino"></div>
         <div id="dragon"></div>
         <div id="bird"></div>
-        <div id="leaderboard" class="button button4" href="leaderboard.php">Go to Leaderboard</div>
+        <div id="leaderboard" class="buttonA button4" ><a href="leaderboard.php">Go to Leaderboard</a></div>
         <div id="score">Score : 0</div>
     </div>
 </body>
