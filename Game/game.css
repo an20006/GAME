@@ -134,10 +134,10 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-/* #leaderboard a {
+#leaderboard a {
     text-decoration: none;
-    color: white;
-} */
+    color: black;
+}
 
 @keyframes dinoJump {
     0% {top: 365px;}
