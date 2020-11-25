@@ -10,6 +10,7 @@ currentplayer = '';
 // Get new player.
 get_player();
 
+
 function restart() {
     dead = false;
     scoreIncrease = 0;
