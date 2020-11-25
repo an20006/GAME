@@ -113,9 +113,6 @@
     color: red;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/* #leaderboard {
-    margin-left: 21px;
-} */
 
 .scoreboard {
     margin-top: 90px;
@@ -137,10 +134,10 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-#leaderboard a {
+/* #leaderboard a {
     text-decoration: none;
     color: white;
-}
+} */
 
 @keyframes dinoJump {
     0% {top: 365px;}
