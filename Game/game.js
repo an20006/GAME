@@ -122,12 +122,12 @@ function get_player() {
     currentplayer = prompt( "Please enter your name", "Harry Potter" );
 }
 
-function update_leaderboard( player,score ) { 
+function update_leaderboard( player,scoreIncrease ) { 
     jQuery.ajax({
         url:"functions.php",    //the page containing php script
         type: "post",    //request type,
         dataType: 'json',
-        data: { player: player, score: score, action:'add_score' },
+        data: { player: player, score: scoreIncrease, action:'add_score' },
         success:function(result){
             console.log(result.result);
         }
