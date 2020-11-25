@@ -70,7 +70,7 @@
     background-size: cover;
     position: relative;
     top: 345px;
-    left: 90%;
+    right: 40px;
 }
 
 #bird {
@@ -80,20 +80,28 @@
     background-size: cover;
     position: relative;
     top: 295px;
-    left: 90%;
+    right: 40px;
 }
 
 #score {
     font-size: 25px;
     color: #54212f;
-    font-weight: bold;
     position: absolute;
-    right: 500px;
-    top: 31px;
-    border: 2px solid black;
+    right: 0px;
+    top: 4px;
+    border: 2px solid firebrick;
+    background-color: firebrick;
     padding: 10px;
     font-family: 'Ubuntu', sans-serif;
-    border-radius: 10px;
+    color: white;
+}
+#gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @keyframes dinoJump {
@@ -111,12 +119,12 @@
 }
 
 @keyframes dragonLeft {
-    0% {left: 90%;}
+    0% {left: 95%;}
     100% {left: -40px;}
 }
 
 @keyframes birdLeft {
-    0% {left: 90%;}
+    0% {left: 95%;}
     100% {left: -40px;}
 }
 

@@ -4,16 +4,17 @@ var bird = document.getElementById("bird");
 music = new Audio("music.mp3")
 gameOverMusic = new Audio("gameover.mp3")
 dead = false;
+music.play()
 
 function restart() {
     dead = false;
     scoreIncrease = 0;
+    gameOver.innerHTML = "";
     moveObjects();
     hit();
 }
 
-music.play()
-var move = moveObjects();
+moveObjects();
 function moveObjects() {
 setInterval(function(){ // This function randomly goes between the bird and dragon
     var number = Math.random();
@@ -41,6 +42,24 @@ setInterval(function(){ // This function randomly goes between the bird and drag
 }, 500)
 }
 
+document.onkeydown = function (e) {
+    console.log("Key code is: ", e.keyCode)
+    if (e.keyCode == 32) {
+        dinoJump();
+    }
+    if (e.keyCode == 38) {
+        dinoJump();
+    }
+    if (e.keyCode == 87) {
+        dinoJump();
+    }
+    if (e.keyCode == 83) {
+        dinoDuck();
+    }
+    if (e.keyCode == 40) {
+        dinoDuck();
+    }
+}
 
 function dinoJump() { // Makes dino jump 
     if (dead == true) {
@@ -56,6 +75,9 @@ function dinoJump() { // Makes dino jump
 }
 
 function dinoDuck() { // Makes dino duck
+    if (dead == true) {
+        return;
+    }
     if (dino.classList == "animateDino" || dino.classList == "animateDinoDuck"){
         return
     }
@@ -75,9 +97,9 @@ setInterval(function(){ // Ends game and also increases score
     if ((dragonLeft<150 && dragonLeft>0 && dinoTop>= 345) || (birdLeft<150 && birdLeft>0 && dinoTop<= 385)){
         dead = true;
         music.pause();
-        gameOverMusic.play();    
-        scoreIncrease = 0;
-        delete scoreIncrease;
+        gameOverMusic.play();
+        gameOver.innerHTML = "Game Over! Press Restart"
+        delete scoreIncrease; moveObjects = undefined;
         return;
     }
     else {
