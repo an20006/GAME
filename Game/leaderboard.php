@@ -13,7 +13,7 @@ require_once( 'functions.php' );
 <body>
     <div id="gameContainer">
         <div id="gameOver"></div>
-        <div id="leaderboard"><a href="game.php">Goto Game</a></div>
+        <div id="leaderboard"><a href="game.php">Go to Game</a></div>
         <div class="scoreboard">
             <table>
                 <tr>

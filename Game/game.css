@@ -42,6 +42,16 @@
       color: white;
   }
   
+  .button4 {
+    background-color: transparent;
+    color: black;
+    border: 2px solid #0032ba;
+  }
+
+  .button4:hover {
+    background-color:  #0032ba;
+    color: white;
+  }
 
 *{
     padding: 0;
@@ -106,13 +116,11 @@
 #leaderboard {
     font-size: 25px;
     color: #54212f;
-    font-weight: bold;
     position: absolute;
     top: 31px;
     border: 2px solid black;
     padding: 10px;
     font-family: 'Ubuntu', sans-serif;
-    border-radius: 10px;
     margin-left: 21px;
 }
 
