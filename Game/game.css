@@ -45,11 +45,11 @@
   .button4 {
     background-color: transparent;
     color: black;
-    border: 2px solid #0032ba;
+    border: 2px solid white;
   }
 
   .button4:hover {
-    background-color:  #0032ba;
+    background-color: white;
     color: white;
   }
 
