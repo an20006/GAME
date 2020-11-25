@@ -107,7 +107,8 @@ setInterval(function(){ // Ends game and also increases score
         return;
     }
     else {
-        scoreIncrease += 1/100;
+        scoreIncrease += 1;
+        Math.floor(scoreIncrease)
         increaseScore(scoreIncrease)
     }
 }, 10)
