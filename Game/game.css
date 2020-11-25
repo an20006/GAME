@@ -1,0 +1,182 @@
+.button {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: transparent;
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .button2 {
+      background-color: transparent;
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;   
+  }
+
+  .button3 {
+      background-color: transparent;
+      color: black;
+      border: 2px solid #ba0057;
+  }
+
+  .button3:hover {
+      background-color: #ba0057;
+      color: white;
+  }
+  
+  .button4 {
+    background-color: transparent;
+    color: black;
+    border: 2px solid white;
+  }
+
+  .button4:hover {
+    background-color: white;
+    color: white;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+}
+#gameContainer {
+    background-image: url(bg.png);
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+#dino {
+    width: 150px;
+    height: 75px;
+    background-image: url(dino1.png);
+    background-size: cover;
+    position: relative;
+    top: 365px;
+}
+
+#dragon {
+    width: 30px;
+    height: 20px;
+    background-image: url(boulder.png);
+    background-size: cover;
+    position: relative;
+    top: 345px;
+    right: 40px;
+}
+
+#bird {
+    width: 30px;
+    height: 20px;
+    background-image: url(boulder.png);
+    background-size: cover;
+    position: relative;
+    top: 295px;
+    right: 40px;
+}
+
+#score {
+    font-size: 25px;
+    color: #54212f;
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    border: 2px solid firebrick;
+    background-color: firebrick;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+#gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.scoreboard {
+    margin-top: 90px;
+}
+
+table {
+    background-color: teal;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin: auto;
+    color: white;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #058cca;
+}
+#leaderboard a {
+    text-decoration: none;
+    color: black;
+}
+
+@keyframes dinoJump {
+    0% {top: 365px;}
+    35% {top: 315px;}
+    65% {top: 315px;}
+    100% {top: 365px;}
+}
+
+@keyframes dinoDuck {
+    0% {top: 365px;}
+    35% {top: 415px;}
+    65% {top: 415px;}
+    100% {top: 365px;}
+}
+
+@keyframes dragonLeft {
+    0% {left: 95%;}
+    100% {left: -40px;}
+}
+
+@keyframes birdLeft {
+    0% {left: 95%;}
+    100% {left: -40px;}
+}
+
+.animateDino {
+    animation: dinoJump 500ms;
+}
+
+.animateDinoDuck {
+    animation: dinoDuck 500ms;
+}
+
+.animateDragon {
+    animation: dragonLeft 1s linear;
+}
+
+.animateBird {
+    animation: birdLeft 1s linear;
+}
